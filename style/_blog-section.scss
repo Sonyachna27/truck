@@ -1,0 +1,76 @@
+.blog-page{
+    margin-top: 170px;
+}
+.blog-single-page{
+    margin-top: 170px;
+}
+    .blog{
+        padding-bottom: 120px;
+
+        &__container{
+            &-title{
+                @include title-wrap;
+            }
+        }
+        &__container{
+            &-content{
+                max-width: 100%;
+
+                .blog-page & {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 40px;
+                     
+                    &-item{
+                        max-width: 305px;
+                    }
+                }
+
+                &-item{
+                    display: flex;
+                    flex-direction: column;
+                    min-width: inherit;
+                    max-width: 100%;
+                    background-color: $--black-blue;
+                    img{
+                        max-height: 205px;
+                        object-fit: cover;
+
+                    }
+                & .item-text{
+                    padding: 20px;
+                    
+                    div,
+                    p,
+                    h3{
+                        color: $--white;
+                    }
+                    h3{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-size: 14px;
+                        font-weight: 700;
+                        margin-bottom: 10px;
+                    }
+                    div{
+                        margin-bottom: 5px;
+                        font-size: 12px;
+                    }
+                    p{
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2; 
+                        -webkit-box-orient: vertical;
+                        box-orient: vertical;
+                        text-overflow: ellipsis;
+                        white-space: normal; 
+                        font-size: 12px;
+                        
+                    }
+                }
+                }
+            }
+        
+        }
+    }

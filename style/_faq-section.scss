@@ -1,0 +1,164 @@
+.faq{
+    padding: 0 0 120px 0  ;
+    .crane-page & {
+      background-color: $--black-blue;
+    }
+    &__container{
+        &-title{
+            @include title-wrap;
+            @media screen and (max-width:900px) {
+              width: 100%;
+              flex-direction: column;
+              gap: 10px;
+            }
+            h2{
+                max-width: 420px;
+                
+              .crane-page & {
+                color: $--white;
+                max-width: 583px;
+              }
+            }
+            h2,
+            p{
+              @media screen and (max-width:900px) {
+                max-width: 100%;
+                text-align: center;
+              }
+            }
+        }
+        &-tabs {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; 
+          }
+          .tab {
+            position: relative;
+            
+            &:nth-of-type(1):before{
+                content: '';
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: $--stroke;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: $--stroke;
+            }
+
+            input {
+                position: absolute;
+                opacity: 0;
+                z-index: -1;
+              }
+              label {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                cursor: pointer;
+                padding: 40px;
+                position: relative;
+                transition: all .5s;
+                color: $--black-blue;
+                font-size: 20px;
+                font-weight: 700;
+                text-transform: uppercase;
+                width: 100%;
+                text-wrap: balance;
+                @media screen and (max-width:420px) {
+                  font-size: 16px;
+                }
+                .crane-page & {
+                  color: $--white;
+                }
+                &:before{
+                    content: url(../images/dagger.svg);
+                    position: absolute;
+                    top: 50%;
+                    right: 0px;
+                    width: 40px;
+                    height: 40px;
+                    transform: translateY(-50%) rotate(0deg); 
+                    transition: transform 0.3s ease;
+                    .crane-page & {
+                      content: url(../images/dagger-white.svg);
+                    }
+                }
+              }
+              &-span{
+                display: flex;
+                font: inherit;
+                justify-content: center;
+                align-items: center;
+                .crane-page & {
+                  color: $--white;
+                }
+              }
+              &__content {
+                max-height: 0;
+                overflow: hidden;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+                margin-top: 0;
+                width: 100%;
+               
+              }
+              input:checked ~ .tab__content {
+                max-height: 100vh;
+                padding: 75.5px 84px 40px 40px;
+                margin-top: -58.5px;
+                font-size: 14px;
+                font-weight: 500;
+                width: 100%;
+                .crane-page & {
+                  color: $--white;
+                }
+              & h4{
+                    font-size: 16px;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                    transition: inherit;
+                    .crane-page & {
+                      color: $--white;
+                    }
+                }
+              &  p{
+                  max-width: 1200px;
+                  transition: inherit;
+                  &:nth-of-type(1){
+                    margin-bottom: 30px;
+                }
+          .crane-page & {
+                  color: $--white;
+          }
+                }
+                
+                
+              }
+              input:checked ~ label:before {
+                transform: translateY(-38%) translateX(-18%) rotate(45deg);
+              }
+               label:hover > .tab-span {
+                color: var(--white);
+                background: var(--red);
+                transition: all .3s;
+                border-color: var(--red);
+              }
+          }
+          
+         
+
+
+    }
+}

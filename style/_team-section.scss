@@ -1,0 +1,176 @@
+.team{
+    padding: 80px 0;
+    background: $--black-blue;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        &-title{
+            
+            @include title-wrap;
+
+            @media screen and (max-width:760px) {
+                flex-direction: column;
+                gap: 10px;
+                max-width: 100%;
+            }
+            h2,
+            div,
+            p{
+                color:$--white;
+               
+            }
+            h2,
+            p{
+                @media screen and (max-width:760px) {
+                    
+                    max-width: 100%;
+                    text-align: center;
+                }
+            }
+            div:nth-of-type(1){
+                a{
+                    color: $--red;
+                }
+            }
+            p,
+            ul li{
+                font-size: 12px;
+            }
+            ul {
+                padding-left: 10px;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                li{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    // padding-left: 5px;
+                    &:before{
+                            content: '-'; // Символ для використання (в даному випадку - кругла крапка)
+                            position: absolute;
+                            left: -10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            margin-right: 10px; // Розмір відступу від зображення до тексту
+                            color: $--white; // Колір рисочки
+                            font-size: 18px; // Розмір шрифту рисочки
+                        
+                    }
+                }
+                
+
+            }
+        }
+        &-bottom{
+            display: grid;
+            grid-template-columns: .95fr 1.04fr;
+            @media screen and (max-width:990px) {
+                grid-template-columns: 1fr;
+            }
+            &-img{
+                object-fit: cover;
+                height: 100%;
+                max-width: 100%;
+                width: 100%;
+                @media screen and (max-width:990px) {
+                    width: 100%;
+                }
+            }
+            &-form{
+                background: $--white;
+                width: 100%;
+                padding: 80px 40px;
+                display: block;
+                width: 100%;
+                @media screen and (max-width:990px) {
+                    padding: 40px 10px;
+                }
+                form{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 10px 11px;
+                    position: relative;
+                        @media screen and (max-width:760px) {
+                            grid-template-columns: 1fr;
+                        }
+                    input, 
+                    textarea,
+                    select{
+                        border: 0.5px solid $--stroke;
+                        padding: 14px 19px;
+                        outline: none;
+                        cursor: pointer;
+                        font-size: 12px;
+                        &::placeholder{
+                            color: #22272B;
+                        }
+                    }
+                    input[type=submit],
+                    textarea{
+                        grid-column: 1 / 3;
+                        width: 100%;
+                        @media screen and (max-width:760px) {
+                            grid-column: 1 ;
+                        }
+                    }
+                    textarea{
+                        resize: none;
+                        margin-bottom: 40px;
+                        max-height: 150px;
+                    }
+                    .btn{
+                        max-width: 100%;
+                    }
+                    .select-wrap {
+                        position: relative;
+                    
+                        &:before {
+                            content: '';
+                            width: 11px;
+                            height: 11px;
+                            position: absolute;
+                            right: 21px;
+                            top: 45%;
+                            z-index: 15;
+                            background: url(../images/Vector-select.svg) no-repeat; 
+                            transform: rotate(0); 
+                            transition: transform 0.3s ease; /* Додаємо плавність ефекту */
+                        }
+                    
+                        select {
+                            -moz-appearance: none;
+                            -webkit-appearance: none;
+                            appearance: none;
+                            position: relative;
+                            width: 100%;
+                            color: inherit;
+                            option {
+                                font: inherit;
+                                    display: block;
+                                    white-space: nowrap;
+                                color: #22272B;
+                                option:hover {
+                                    background-color: #bebbbb;
+                                }
+                        }
+                    }
+                        // .select-wrap:hover + .select-wrap:before {
+                        //     transform: rotate(90deg);
+                        // }
+                
+                        // .select-wrap:hover > .select-wrap:before {
+                        //     transform: rotate(90deg);                         // }
+                    
+                    }
+                    
+                    
+                }
+            }
+            
+        }
+    }
+}

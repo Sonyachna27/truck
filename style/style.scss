@@ -1,0 +1,144 @@
+/* font */
+@font-face {
+    font-family: "Manrope";
+    src: url(../font/Manrope/static/Manrope-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url(../font/Manrope/static/Manrope-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url(../font/Manrope/static/Manrope-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url(../font/Manrope/static/Manrope-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Manrope";
+    src: url(../font/Manrope/static/Manrope-ExtraBold.ttf);
+    font-weight: 800;
+}
+/* root*/
+@import './reset.scss';
+@import './root.scss';
+@import './header.scss';
+@import './main-section.scss';
+@import './choose-section.scss';
+@import './about-section.scss';
+@import './services-section.scss';
+@import './gallery-section.scss';
+@import './faq-section.scss';
+@import './blog-section.scss';
+@import './team-section.scss';
+@import './footer.scss';
+@import './company-section.scss';
+@import './partners__section.scss';
+@import './photo-section.scss';
+@import './crane-section.scss';
+@import './includes-section.scss';
+@import './careers-section.scss';
+@import './driver-section.scss';
+@import './info-section.scss';
+@import './contact-section.scss';
+@import './state.scss';
+
+/* style*/
+
+.container{
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+*{
+    font-family: "Manrope";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    font-style: normal;
+    
+}
+body{
+  color: $--black-blue;
+}
+h1{
+  font-size: 64px;
+  font-weight: 800;
+  font-family: "Manrope";
+  text-transform: uppercase;
+  padding: 0;
+  @media screen and (max-width:760px) {
+    font-size: 45px;
+  }
+}
+
+h2 span,
+h3 span,
+h4 span{
+  font: inherit;
+  text-transform: inherit;
+}
+
+h2{
+  font-size: 45px;
+  font-weight: 800;
+  text-transform: uppercase;
+  @media screen and (max-width:760px) {
+    font-size: 35px;
+  }
+}
+h3 {
+  font-size: 32px;
+  font-weight: 800;
+  @media screen and (max-width:760px) {
+    font-size: 22px;
+  }
+}
+p{
+  font-size: 14px;
+  font-weight: 400;
+}
+.btn{
+  display: flex;
+  max-width: 220px;
+  padding: 14.5px 29.5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid transparent;
+  background-color: $--red;
+  font-size: 16px;
+  font-weight: 700;
+  color: $--white;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btn:hover{
+  background-color: transparent;
+  border-color: $--red;
+  color: $--red;
+  transition: .3s ease;
+}
+.breadcrumbs{
+  background: $--red;
+  padding: 12px 0;
+  font-size: 12px;
+  a, 
+  span{
+    color: $--white;
+  }
+  a{
+    &:hover{
+      color: aliceblue;
+      transition: .3s;
+    }
+  }
+  
+}
+

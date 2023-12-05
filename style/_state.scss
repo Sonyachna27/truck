@@ -1,0 +1,46 @@
+.state-page{
+    margin-top: 170px;
+    .state{
+        padding: 60px 0 120px 0 ;
+        h2{
+            margin-bottom: 40px;
+        }
+        &__container{
+            border: 1px solid $--stroke;
+            padding: 60px 114px;
+            display: flex;
+            flex-direction: column;
+            gap: 90px;
+
+            &-article{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                .article-content{
+                    h3,
+                    p,
+                    h4{
+                        color: $--dark-purple-blue;
+                    }
+                    h3{
+                        text-transform: uppercase;
+                        margin-bottom: 10px;
+
+                    }
+                    h4{
+                        margin-bottom: 10px;
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                    p:not(:nth-last-of-type(1)){
+                        margin-bottom: 20px;
+                    }
+
+                }
+            }
+
+        }
+    }
+    
+}

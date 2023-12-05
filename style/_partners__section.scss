@@ -1,0 +1,17 @@
+.partners{
+    padding-bottom: 120px;
+    .partner__container{
+        &-title{
+            @include title-wrap;
+        }
+        &-blocks{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            &-item{
+                max-width: 100%;
+                padding: 10px;
+            }
+        }
+    }
+}

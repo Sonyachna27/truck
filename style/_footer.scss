@@ -1,0 +1,58 @@
+.footer{
+    padding: 20px 0;
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $--stroke;
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+        &-top{
+            @include flex-space;
+            a:hover{
+                color: $--red;
+    transition: 0.3s ease;
+            }
+            nav ul{
+                @include flex-center;
+                gap: 50px;
+                padding: 0;
+                
+                li a{
+                    font-size: 14px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                }
+            }
+            @media screen and (max-width:1023px){
+                flex-direction: column;
+                nav ul{
+                    flex-direction: column;
+                }
+            }
+        }
+        &-copy{
+            @include flex-center;
+            justify-content: center;
+            font-size: 12px;
+            position: relative;
+            padding: 20px 0 0 0;
+            &:before{
+                content: '';
+                width: 100%;
+                height: 1px;
+                background: $--stroke;
+                position: absolute;
+                top:0;
+                left: 0;
+            }
+        }
+    }
+}
