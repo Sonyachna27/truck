@@ -26,20 +26,19 @@
                 }
                 div{
                     display: flex;
-                    // align-items: center;
                     flex-direction: column;
                     justify-content: center;
                     padding: 40px;
-                    // &:not(:nth-of-type(2)){
-                       
-                    // }
                     span{
                         margin-bottom: 10px;
+                        font-size: 16px;
+                        font-weight: 600;
                     }
                     h3{
                         margin-bottom: 20px;
                        span{
                         color: $--red;
+                        font: inherit;
                        }
                     }
                     p:not(:nth-last-of-type(1)){

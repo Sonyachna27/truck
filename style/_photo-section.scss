@@ -1,7 +1,6 @@
 .photo{
-    .crane-page & {
         padding: 120px 0;
-    }
+    
     &__container{
         display: flex;
         flex-direction: column;
@@ -15,6 +14,14 @@
                     .crane-page & {
                         max-width: 469px;
                     }
+                    @media screen and (max-width:760px) {
+                        max-width: 100%;
+                    }
+                }
+                @media screen and (max-width:760px) {
+                    flex-direction: column;
+                    gap: 10px;
+                    text-align: center;
                 }
             }
             &-block{
@@ -22,6 +29,9 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 40px;
                 margin-bottom: 40px;
+                @media screen and (max-width:760px) {
+                    grid-template-columns: 1fr;
+                }
                 &-img{
                     max-width: 100%;
                     width: 100%;

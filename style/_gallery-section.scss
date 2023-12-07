@@ -36,7 +36,7 @@
   height: 40px;
   background:$--red;
   @include flex-center;
-justify-content: center;
+  justify-content: center;
   padding: 9.5px;
   top: -19px;
   border: 1px solid transparent;
@@ -54,14 +54,16 @@ justify-content: center;
         }
     }
 }
-.next{
+.prev {
     left: 0;
     right: inherit;
+    
 }
-.prev {
+.next {
   right: 0;
   left: inherit;
   transform: scale(-1);
+  
 }
 .swiper-button-next::after,
 .swiper-button-prev::after{
