@@ -21,6 +21,10 @@
                     background: $--black-blue;
                     padding: 60px 40px;
                     gap: 60px;
+
+                    @media screen and (max-width:360px) {
+                        padding: 30px 15px;
+                    }
                     .contact{
                         display: flex;
                         flex-direction: column;
@@ -55,24 +59,29 @@
                                 color: $--stroke;
                                  font-size: 14px;
                                  font-weight: 400;  
+
                              }
 
                          }
                     }
                   
-                   
                     & .header__wrapper-top-social{
                         position: relative;
                         width: 100%;
                         gap: 10px;
+
+                        a{
+                            width: 45px;
+                            height: 45px;
+                        }
                         svg{
                             rect{
-                                fill: $--red;
+                                fill: transparent;
                             }
                             width: 45px;
                             height: 45px;
                             path{
-                                fill: $--white;
+                                fill: $--red;
                             }
                         }
                         &::before{
