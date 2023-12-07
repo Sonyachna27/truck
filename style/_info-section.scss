@@ -1,5 +1,8 @@
 .info{
     padding-bottom: 120px;
+    @media screen and (max-width:1023px) {
+        padding-bottom: 60px;
+    }
     &__container{
 
         .title{

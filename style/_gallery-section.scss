@@ -1,5 +1,8 @@
 .gallery{
     padding: 120px 0;
+    @media screen and (max-width:1023px) {
+      padding: 60px 0;
+  }
     &__container{
         display: flex;
         flex-direction: column;
@@ -40,6 +43,7 @@
   padding: 9.5px;
   top: -19px;
   border: 1px solid transparent;
+  cursor: pointer;
   svg rect{
     fill: $--red;
   }

@@ -1,11 +1,11 @@
-// .services-page{
-//     margin-top: 170px;
-    
-//   }
+
 .services{
     .services-page & {
         background-color: $--white;
         padding-bottom: 120px;
+        @media screen and (max-width:1023px) {
+            padding-bottom: 60px;
+        }
     }
     padding: 76px 0 80px 0;
     background-color: $--black-blue;

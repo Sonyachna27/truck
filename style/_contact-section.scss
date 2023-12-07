@@ -1,9 +1,10 @@
 .contact-page{
-    margin-top: 170px;
-
     .contacts{
         &__container{
             padding: 60px 0 120px 0;
+            @media screen and (max-width:1023px) {
+                padding: 60px 0;
+            }
             .title{
                 @include title-wrap;
             }

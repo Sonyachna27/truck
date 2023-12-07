@@ -1,12 +1,15 @@
-.blog-page{
-    margin-top: 170px;
-}
-.blog-single-page{
-    margin-top: 170px;
-}
+
+
     .blog{
         padding-bottom: 120px;
+        @media screen and (max-width:1023px) {
+            padding-bottom: 60px;
+        }
 
+        .blog-page & {
+            padding: 60px 0;
+            
+        }
         &__container{
             &-title{
                 @include title-wrap;
@@ -20,9 +23,17 @@
                     display: grid;
                     grid-template-columns: repeat(4, 1fr);
                     gap: 40px;
-                     
+                    
+                    @media screen and (max-width:1023px) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    @media screen and (max-width:760px) {
+                        grid-template-columns: 1fr;
+                    }
+
                     &-item{
                         max-width: 305px;
+                        min-width: 100%;
                     }
                 }
 
@@ -32,6 +43,7 @@
                     min-width: inherit;
                     max-width: 100%;
                     background-color: $--black-blue;
+
                     img{
                         max-height: 205px;
                         object-fit: cover;
