@@ -1,9 +1,14 @@
 .state-page{
-    margin-top: 170px;
     .state{
         padding: 60px 0 120px 0 ;
+        @media screen and (max-width:1023px) {
+            padding: 60px 0;
+        }
         h2{
             margin-bottom: 40px;
+           @media screen and (max-width:360px) {
+            font-size: 25px;
+           }
         }
         &__container{
             border: 1px solid $--stroke;
@@ -11,6 +16,17 @@
             display: flex;
             flex-direction: column;
             gap: 90px;
+
+            @media screen and (max-width:1023px) {
+                padding: 60px;
+                gap: 60px;
+            }
+            @media screen and (max-width:760px) {
+                padding: 30px;
+            }
+            @media screen and (max-width:360px) {
+                padding: 20px;
+            }
 
             &-article{
                 display: flex;
