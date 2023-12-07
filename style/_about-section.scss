@@ -1,16 +1,15 @@
-// .about{
-//       .aboutUs{
-//         margin-top: 60px;
-//         padding-bottom: 0;
-//         @media screen and (max-width: 1023px) {
-//           padding-bottom: 0px;
+.about{
+    background-color: $--Background;
+      .aboutUs{
+        padding-top: 60px;
+        padding-bottom: 0;
+        @media screen and (max-width: 1023px) {
+          padding-bottom: 0px;
           
-//         }
-//       }
-//       @media screen and (max-width: 1023px) {
-//         margin-top: 0;
-//       }
-//   }
+        }
+      }
+     
+  }
 .aboutUs{
     padding: 120px 0;
     &__container{

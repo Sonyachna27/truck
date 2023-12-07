@@ -1,16 +1,37 @@
 .partners{
-    padding-bottom: 120px;
     .partner__container{
         &-title{
             @include title-wrap;
+            @media screen and (max-width:760px) {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+            }
         }
         &-blocks{
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 40px;
+            width: 100%;
+            @media screen and (max-width:1023px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media screen and (max-width:760px) {
+                grid-template-columns:  1fr;
+            }
             &-item{
-                max-width: 100%;
                 padding: 10px;
+                background-color: $--white;
+                min-height: 160px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+               & img{
+                max-width: 220px;
+                width: 100%;
+               }
             }
         }
     }
