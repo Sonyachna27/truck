@@ -76,15 +76,17 @@
                     @media screen and (max-width:768px) {
                        max-width: 100%;
                     }
+                    svg rect{
+                        fill: $--black-blue;
+                    }
                     .services-page & {
                         background: $--black-blue;
                         
-                       
                         svg path{
-                            fill: $--white;
+                            fill: $--black-blue;
                         }
                         svg rect{
-                            fill: $--red;
+                            fill: $--white;
                         }
                     }
                     @media screen and (max-width:1023px) {
