@@ -1,5 +1,6 @@
 main{
     margin-top: 170px;
+    background-color: $--Background;
     @media screen and (max-width:1023px) {
         margin-top: 120px;
     }
@@ -7,7 +8,7 @@ main{
 .main{
     padding: 241px 0 220px 0;
     position: relative;
-    background: url(../images/main-img.png) center center / cover no-repeat;
+    background: url(../images/main-img.jpg) center center / cover no-repeat;
     width: 100%;
     &__container{
         position: relative;
