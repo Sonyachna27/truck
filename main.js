@@ -74,3 +74,8 @@ const menuBtn = document.querySelector('.menuBtns');
   menuBtn.addEventListener('click' , () => document.querySelector('html').classList.toggle('open'));
   menuLinks.forEach((item) => item.addEventListener('click' , () => document.querySelector('html').classList.toggle('open')));
   
+  const closePop = document.querySelector('.close');
+  const openPop = document.querySelector('.quote');
+
+  openPop.addEventListener('click', () => document.querySelector('html').classList.add('pop'));
+  closePop.addEventListener('click', () => document.querySelector('html').classList.toggle('pop'));

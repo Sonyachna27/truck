@@ -117,44 +117,67 @@
               &__content {
                 max-height: 0;
                 overflow: hidden;
-                -webkit-transition: all 0.3s;
-                -moz-transition: all 0.3s;
-                -o-transition: all 0.3s;
-                transition: all 0.3s;
-                margin-top: 0;
-                width: 100%;
-               
+                transition: .3s;
+                overflow: hidden;
+                -webkit-transition: all 0.35s;
+                -moz-transition: all 0.35s;
+                -o-transition: all 0.35s;
+                transition: all 0.35s cubic-bezier(.6,.27,.08,.79);
+                opacity: 0;
+
+                & h4{
+                  font-size: 16px;
+                  font-weight: 800;
+                  text-transform: uppercase;
+                  margin-bottom: 10px;
+                  .crane-page & {
+                    color: $--white;
+                  }
               }
-              input:checked ~ .tab__content {
+            &  p{
+                max-width: 1200px;
+                transition: inherit;
+                &:nth-of-type(1){
+                  margin-bottom: 30px;
+              }
+        .crane-page & {
+                color: $--white;
+        }
+              }
+            }
+            
+            input:checked ~ .tab__content {
                 max-height: 100vh;
-                padding: 75.5px 84px 40px 40px;
-                margin-top: -58.5px;
+                padding: 0px 40px 40px 40px;
                 font-size: 14px;
                 font-weight: 500;
                 width: 100%;
+                opacity: 1;
+
+                & h4{
+                  font-size: 16px;
+                  font-weight: 800;
+                  text-transform: uppercase;
+                  margin-bottom: 10px;
+                  .crane-page & {
+                    color: $--white;
+                  }
+              }
+            &  p{
+                max-width: 1200px;
+                transition: inherit;
+                &:nth-of-type(1){
+                  margin-bottom: 30px;
+              }
+        .crane-page & {
+                color: $--white;
+        }
+              }
                 .crane-page & {
-                  color: $--white;
+                    color: $--white;
                 }
-              & h4{
-                    font-size: 16px;
-                    font-weight: 800;
-                    text-transform: uppercase;
-                    margin-bottom: 10px;
-                    transition: inherit;
-                    .crane-page & {
-                      color: $--white;
-                    }
-                }
-              &  p{
-                  max-width: 1200px;
-                  transition: inherit;
-                  &:nth-of-type(1){
-                    margin-bottom: 30px;
-                }
-          .crane-page & {
-                  color: $--white;
-          }
-                }
+            }
+              
                 
                 
               }
@@ -168,9 +191,4 @@
                 border-color: var(--red);
               }
           }
-          
-         
-
-
     }
-}
