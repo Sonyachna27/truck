@@ -13,15 +13,17 @@
             gap: 40px;
             &-item{
                 display: flex;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
                 gap: 40px;
                 border: 1px solid $--stroke;
                 background:  #F6F4F4;
                 @media screen and (max-width:1023px) {
-                    flex-direction: column-reverse;
+                    grid-template-columns: 1fr;
                 }
                 img{
                     object-fit: cover;
-                    
+                    height: 100%;
                     width: 100%;
                     max-width: 650px;
                     @media screen and (max-width:1023px) {
@@ -50,7 +52,21 @@
                     }
                 }
             &:nth-of-type(2){
-                flex-direction: row-reverse;
+                
+                img{
+                    grid-column: 2 / 2;
+                    @media screen and (max-width:1023px) {
+                        grid-column: 1;
+                    }
+                }
+                div{
+                    grid-column: 1 / 1;
+                    grid-row: 1;
+                    @media screen and (max-width:1023px) {
+                        grid-column: 1;
+                        grid-row: 2;
+                    }
+                }
                 // div{
                 //     padding-left: 40px;
                 //     padding-right: 0;
