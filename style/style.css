@@ -460,7 +460,6 @@ main {
   }
 }
 .aboutUs__container-top img {
-  aspect-ratio: auto;
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 650px;
@@ -1609,6 +1608,16 @@ main {
   align-items: flex-start;
   justify-content: flex-start;
   padding: 80px;
+}
+@media screen and (max-width: 760px) {
+  .crane__container-content-text {
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .crane__container-content-text {
+    padding: 20px;
+  }
 }
 .crane__container-content-text h3 {
   margin-bottom: 20px;
