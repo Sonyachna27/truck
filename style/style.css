@@ -1343,6 +1343,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 20px;
 }
 .footer__container-top a:hover {
   color: #E32528;
@@ -1362,7 +1363,6 @@ main {
 @media screen and (max-width: 1023px) {
   .footer__container-top {
     flex-direction: column;
-    padding-bottom: 20px;
   }
   .footer__container-top nav ul {
     flex-direction: column;
@@ -2452,6 +2452,7 @@ p {
 .breadcrumbs a,
 .breadcrumbs span {
   color: #fff;
+  font-size: 12px;
 }
 .breadcrumbs a:hover {
   color: aliceblue;
