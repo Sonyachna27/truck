@@ -44,9 +44,6 @@ var blogSwiper = new Swiper(".mySwiper-blog", {
     type: 'bullets',
     clickable: true,
 },
-// autoplay: {                         //autoplay
-//     delay: 2000,  
-// }, 
 slidesPerGroup: 2,
   breakpoints: {
       320: {
@@ -74,8 +71,8 @@ const menuBtn = document.querySelector('.menuBtns');
   menuBtn.addEventListener('click' , () => document.querySelector('html').classList.toggle('open'));
   menuLinks.forEach((item) => item.addEventListener('click' , () => document.querySelector('html').classList.toggle('open')));
   
-  const closePop = document.querySelector('.close');
-  const openPop = document.querySelector('.quote');
+//   const closePop = document.querySelector('.close');
+//   const openPop = document.querySelector('.quote');
 
-  openPop.addEventListener('click', () => document.querySelector('html').classList.add('pop'));
-  closePop.addEventListener('click', () => document.querySelector('html').classList.toggle('pop'));
+//   openPop.addEventListener('click', () => document.querySelector('html').classList.add('pop'));
+//   closePop.addEventListener('click', () => document.querySelector('html').classList.toggle('pop'));
