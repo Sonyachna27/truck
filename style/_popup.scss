@@ -29,18 +29,15 @@
             }
             & form{
                 display: grid;
-            // grid-template-columns: repeat(12, 83.4px);
             grid-template-columns: repeat(12, .3fr);
             @media screen and (max-width:767px) {
                 grid-template-columns: repeat(2, minmax(135px, 1fr));
                 gap: 20px 10px;
             }
-           
             gap:  20px;
             max-width: 100%;
             align-items: center;
             justify-content: center;
-            
             input[type=submit]{
                 grid-column: 1 / 13;
 

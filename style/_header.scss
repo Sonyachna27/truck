@@ -125,8 +125,7 @@ header{
                 @include flex-center;
                 gap: 50px;
                 padding: 0;
-                max-width: 100%;
-                width: 100%;
+                
                 @media screen and (max-width:1133px) {
                     gap: 34px;
                 }
@@ -139,25 +138,30 @@ header{
                   z-index: 2;
                   font-size: 36px;
                   padding: 40px 20px;
+                  max-width: 100%;
+                width: 100%;
                   
                 }
                 
                 li {
-                    width: 100%;
+                    @media screen and (max-width:1023px) {
+                        width: 100%;
+                    }
+                   
                     a{
-                        font-size: 32px;
+                        font-size: 18px;
                         font-weight: 600;
                         text-transform: capitalize;
                         min-width: 100%;
-                        @media screen and (max-width:360px) {
-                            font-size: 16px;
+                        @media screen and (max-width:1023px) {
+                            font-size: 32px;
+                            font-weight: 600;
                         }
                     }
 
                     .header__wrapper-top{
                         display: none;
                         @media screen and (max-width:1023px) {
-
                         display: flex;
                         align-items: start;
                         flex-direction: column;
@@ -189,6 +193,8 @@ header{
                               display: flex;
                               max-width: 100%;
                               margin: 25px 0;
+                              font-size: 16px;
+                                font-weight: 700;
                             }
                         
                     }
@@ -215,6 +221,7 @@ header{
         
         .btn{
             max-width: 217px;
+            text-transform: uppercase;
             @media screen and (max-width:1023px) {
                 display: none;
             }
