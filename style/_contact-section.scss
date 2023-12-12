@@ -13,6 +13,10 @@
                 grid-template-columns: 0.665fr 1.449fr;
                 @media  screen and (max-width:760px) {
                     grid-template-columns: 1fr;
+
+                   & iframe {
+                    grid-row: 1 / 1;
+                   }
                 }
                 .contact-wrap{
                     display: flex;
