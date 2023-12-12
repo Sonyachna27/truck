@@ -2341,6 +2341,7 @@ main {
 }
 .popup__wrapper .popup__bottom form input[type=submit] {
   grid-column: 1/13;
+  cursor: pointer;
   max-width: 100%;
   margin-top: 20px;
 }
